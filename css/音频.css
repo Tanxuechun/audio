@@ -1,0 +1,51 @@
+#top{
+				display:flex ;
+				justify-content: space-between;
+				width:750px;
+				height: 100px;
+			}
+			#top div{
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				font-size: 24px;
+			}
+			#list{
+			width: 750px;
+			}
+			#list div{
+				font-size: 24px;
+				padding-bottom: 10px;
+				padding-top: 10px;
+				border-bottom: 1px solid#ccc;
+			}
+			#bottom{
+				padding-top: 20px;
+				display: flex;
+				width: 750px;
+				
+			}
+			#bottom img{
+				height: 200px;
+				width:200px;
+				border-radius: 100px;
+				
+			}
+			#bottom #bottomRight{
+				display: flex;
+				padding-left: 20px;
+				font-size:80px;
+				height: 200px;
+				line-height: 200px;
+			}
+			#bottom #bottomRight #inf{
+				width: 150px;
+				font-size: 24px;
+				text-align: center;
+			}
+			#bottom #bottomRight #inf1{
+				width: 150px;
+				font-size: 24px;
+				text-align: center;
+			}
+			

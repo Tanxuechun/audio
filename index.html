@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style type="text/css">
+			#btnPlay{
+				width: 100px;
+				height: 40px;
+				border-radius: 10px;
+				background: pink;
+				border: none;
+				outline: none;
+			}
+		</style>
+	</head>
+	<body>
+		<!--音频文件
+			控制器：controls="controls"
+		-->
+		<audio src="img/庄心妍 - 当蝴离开了蝶.mp3" id="mp3"></audio>
+		<button id="btnPlay">播放</button>
+		<button id="btnPause">暂停</button>
+		<button id="midVolume">中等音量</button>
+		<button id="maxVolume">高音量</button>
+		<button id="minVolume">低音量</button>
+		<button id="changeMusic">换一首歌</button>
+		
+		<script type="text/javascript">
+			var playAudio=false;//设置一个变量判断是不是在播放，默认状态没有播放，而没有播放为false，所以！playAudio没有播放为true
+			var music=document.querySelector("#mp3");
+			document.querySelector("#btnPlay").onclick=function(){
+				if(!playAudio){
+					music.play();
+					playAudio=true;
+					
+				}else{
+					document.querySelector("#mp3").pause();
+					playAudio=false;	
+				}
+				
+			}
+			document.querySelector("#btnPause").onclick=function(){
+				music.pause();
+			}
+			document.querySelector("#midVolume").onclick=function(){
+				music.volume=0.5;
+			}
+			document.querySelector("#minVolume").onclick=function(){
+				if(music.muted){
+					music.muted=false;
+				}else{
+					music.muted=true;
+					
+				}
+			}
+			document.querySelector("#maxVolume").onclick=function(){
+				music.volume=1;
+			}
+			document.querySelector("#changeMusic").onclick=function(){
+				music.src="img/安瑞兮 - 孤单心事.mp3";
+				music.play();
+			}
+		</script>
+	</body>
+</html>
